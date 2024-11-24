@@ -13,7 +13,8 @@
         android:scaleType="fitXY"
         app:srcCompat="@drawable/fact_back"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="-4dp" />
+        tools:layout_editor_absoluteY="-4dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView"
@@ -53,7 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:src="@drawable/planet_earth"
-                app:srcCompat="@drawable/image" />  <!-- Замените на ваш ресурс иконки -->
+                app:srcCompat="@drawable/image" />
 
             <TextView
                 android:id="@+id/button_text1"
@@ -75,7 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:src="@drawable/planet_earth"
-                app:srcCompat="@drawable/img_1" />  <!-- Замените на ваш ресурс иконки -->
+                app:srcCompat="@drawable/img_1" />
 
             <TextView
                 android:id="@+id/button_text3"
@@ -97,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:src="@drawable/planet_earth"
-                app:srcCompat="@drawable/img_2" />  <!-- Замените на ваш ресурс иконки -->
+                app:srcCompat="@drawable/img_2" />
 
             <TextView
                 android:id="@+id/button_text2"
@@ -119,7 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:src="@drawable/planet_earth"
-                app:srcCompat="@drawable/img_3" />  <!-- Замените на ваш ресурс иконки -->
+                app:srcCompat="@drawable/img_3" />
 
             <TextView
                 android:id="@+id/button_text4"
@@ -135,9 +136,12 @@
     <LinearLayout
         android:layout_width="410dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="280dp">
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3">
 
         <LinearLayout
             android:layout_width="410dp"
@@ -153,7 +157,7 @@
                 android:layout_marginLeft="35dp"
                 android:layout_marginRight="25dp"
                 android:src="@drawable/planet_earth"
-                app:srcCompat="@drawable/handshake" />
+                app:srcCompat="@drawable/img_8" />
 
             <LinearLayout
                 android:layout_width="280dp"
@@ -162,29 +166,291 @@
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="280dp">
 
-                <TextView
-                    android:id="@+id/button_text6"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="280dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/comfortaa_bold"
-                    android:gravity="center"
-                    android:text="Ты душа компании"
-                    android:textSize="16sp" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="280dp">
+
+                    <TextView
+                        android:id="@+id/button_text6"
+                        android:layout_width="247dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity=""
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:text="Ты душа компании"
+                        android:textSize="16sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="280dp">
+
+                        <ImageView
+                            android:id="@+id/icon6"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:src="@drawable/planet_earth"
+                            app:srcCompat="@drawable/img_11" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="8dp">
+
+                    <View
+                        android:layout_width="260dp"
+                        android:layout_height="10dp"
+                        android:background="@drawable/white_round"
+                        android:backgroundTint="@color/white_2" />
+
+                    <View
+                        android:layout_width="50dp"
+                        android:layout_height="10dp"
+                        android:background="@drawable/white_round"
+                        android:backgroundTint="@color/orange_main" />
+
+                </FrameLayout>
+
 
                 <TextView
                     android:id="@+id/button_text7"
                     android:layout_width="180dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto"
-                    android:text="До звания 'Социальный магнит' осталось 24 факта"
+                    android:text="До звания 'Социальный магнит' осталось 124 факта"
                     android:textAlignment="textStart"
                     android:textColor="@color/grey2"
                     android:textSize="11sp" />
 
             </LinearLayout>
 
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="570dp"
+        android:gravity="start"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="410dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="start">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:backgroundTint="@color/grey" />
+
+            <TextView
+                android:id="@+id/button_text11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Использование приложения"
+                android:textAlignment="textStart"
+                android:textColor="@color/grey2"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:backgroundTint="@color/grey" />
+
+            <LinearLayout
+                android:layout_width="410dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="start">
+
+                <TextView
+                    android:id="@+id/button_text12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="История прочтения"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black_2"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey"
+                    android:backgroundTint="@color/grey" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="410dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="start">
+
+
+            <TextView
+                android:id="@+id/button_text10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Настройки"
+                android:textAlignment="textStart"
+                android:textColor="@color/grey2"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:backgroundTint="@color/grey" />
+
+            <LinearLayout
+                android:layout_width="410dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="start">
+
+
+                <LinearLayout
+                    android:layout_width="410dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/button_text13"
+                        android:layout_width="330dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:paddingLeft="40dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:text="Уведомления"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black_2"
+                        android:textSize="16sp" />
+
+
+                    <FrameLayout
+                        android:layout_width="56dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical">
+
+                        <View
+                            android:layout_width="56dp"
+                            android:layout_height="34dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/button_white"
+                            android:backgroundTint="@color/green" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="24dp"
+                            android:background="@drawable/button_white"
+                            android:backgroundTint="@color/white_2"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="5dp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/grey"
+                    android:backgroundTint="@color/grey" />
+
+                <LinearLayout
+                    android:layout_width="410dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/button_text14"
+                        android:layout_width="330dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:paddingLeft="40dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:text="Звук уведомлений"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black_2"
+                        android:textSize="16sp" />
+
+
+                    <FrameLayout
+                        android:layout_width="56dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical">
+
+                        <View
+                            android:layout_width="56dp"
+                            android:layout_height="34dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/button_white"
+                            android:backgroundTint="@color/green" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="24dp"
+                            android:background="@drawable/button_white"
+                            android:backgroundTint="@color/white_2"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="5dp" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey"
+                    android:backgroundTint="@color/grey" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
