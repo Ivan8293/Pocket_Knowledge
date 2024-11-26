@@ -199,7 +199,7 @@
                             android:layout_width="17dp"
                             android:layout_height="17dp"
                             android:src="@drawable/planet_earth"
-                            app:srcCompat="@drawable/img_11" />
+                            app:srcCompat="@drawable/img_10" />
 
                     </LinearLayout>
 
