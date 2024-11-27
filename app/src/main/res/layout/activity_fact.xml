@@ -15,8 +15,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+
 
         <LinearLayout
             android:layout_width="102dp"
@@ -34,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />  <!-- Замените на ваш ресурс иконки -->
+        app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/button_text1"
@@ -118,11 +117,13 @@
         android:layout_width="410dp"
         android:layout_height="812dp"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/fact_back"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="-3dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fact_back" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
@@ -140,6 +141,7 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="160dp"
         android:width="188dp"
         android:height="60dp"
         android:backgroundTint="@color/orange_main"
@@ -147,8 +149,8 @@
         android:text="ПОДРОБНЕЕ"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
 
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.269"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -157,12 +159,15 @@
     <LinearLayout
         android:layout_width="71dp"
         android:layout_height="56dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginBottom="260dp"
         android:background="@drawable/button_orange_2"
         android:backgroundTint="@color/orange_main"
         android:gravity="center"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="269dp"
-        tools:layout_editor_absoluteY="573dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:id="@+id/icon5"

@@ -17,8 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ExtraText">
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+
 
         <LinearLayout
             android:layout_width="102dp"
@@ -36,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>  <!-- Замените на ваш ресурс иконки -->
+        app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/button_text1"
@@ -120,9 +119,10 @@
         android:layout_width="410dp"
         android:layout_height="812dp"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/fact_back"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="-4dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fact_back" />
 
     <TextView
         android:id="@+id/textView"

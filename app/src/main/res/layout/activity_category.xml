@@ -11,9 +11,10 @@
         android:layout_width="410dp"
         android:layout_height="812dp"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/fact_back"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="-4dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fact_back" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -25,8 +26,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+
 
         <LinearLayout
             android:layout_width="102dp"
@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:src="@drawable/planet_earth"
-                app:srcCompat="@drawable/image" />  <!-- Замените на ваш ресурс иконки -->
+                app:srcCompat="@drawable/image" />
 
             <TextView
                 android:id="@+id/button_text1"
@@ -137,9 +137,10 @@
         android:layout_marginTop="30dp"
         app:columnCount="2"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:rowCount="4"
-        tools:layout_editor_absoluteX="1dp">
+        app:rowCount="4">
 
         <LinearLayout
             android:layout_width="181dp"
