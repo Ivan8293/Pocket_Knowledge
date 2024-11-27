@@ -27,11 +27,16 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/icon1"
+                android:id="@+id/MainButton"
                 android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:src="@drawable/planet_earth"
-                app:srcCompat="@drawable/image" />  <!-- Замените на ваш ресурс иконки -->
+                app:srcCompat="@drawable/image" 
+                app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>  <!-- Замените на ваш ресурс иконки -->
 
             <TextView
                 android:id="@+id/button_text1"
@@ -49,7 +54,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/icon3"
+                android:id="@+id/CatButton"
                 android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:src="@drawable/planet_earth"
@@ -71,7 +76,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/icon2"
+                android:id="@+id/favorButton"
                 android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:src="@drawable/planet_earth"
@@ -93,7 +98,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/icon4"
+                android:id="@+id/button_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:src="@drawable/planet_earth"
@@ -427,7 +432,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/button_text12"
+                android:id="@+id/history"
                 android:layout_width="289dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
