@@ -44,6 +44,7 @@
         android:paddingBottom="10dp"
 
         <LinearLayout
+            android:id="@+id/fact_button"
             android:layout_width="102dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -67,6 +68,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/category_button"
             android:layout_width="102dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -90,6 +92,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/favorite_button"
             android:layout_width="102dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -113,6 +116,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/menu_button"
             android:layout_width="102dp"
             android:layout_height="wrap_content"
             android:gravity="center"

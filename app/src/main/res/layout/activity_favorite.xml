@@ -20,6 +20,7 @@
 
 
         <LinearLayout
+            android:id="@+id/fact_button"
             android:layout_width="102dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -30,12 +31,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:src="@drawable/planet_earth"
-                app:srcCompat="@drawable/image" 
                 app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/image" />
 
             <TextView
                 android:id="@+id/button_text1"
@@ -47,6 +48,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/category_button"
             android:layout_width="102dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -69,6 +71,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/favorite_button"
             android:layout_width="102dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -91,6 +94,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/menu_button"
             android:layout_width="102dp"
             android:layout_height="wrap_content"
             android:gravity="center"

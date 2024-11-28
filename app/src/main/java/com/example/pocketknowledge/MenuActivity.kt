@@ -6,49 +6,55 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.TextView
 
 class MenuActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId", "WrongViewCast")
+//    @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        // Находим кнопки по ID
-        val buttonOpenFact = findViewById<Button>(R.id.MainButton)
-        val buttonOpenCategories = findViewById<Button>(R.id.CatButton)
-        val buttonOpenFavorites = findViewById<Button>(R.id.favorButton)
-        val buttonOpenMenu = findViewById<Button>(R.id.button_menu)
-        val buttonOpenHistory = findViewById<Button>(R.id.history)
+        val LinearLayoutCategory = findViewById<LinearLayout>(R.id.category_button)
+        val LinearLayoutFact = findViewById<LinearLayout>(R.id.fact_button)
+        val LinearLayoutFavorite = findViewById<LinearLayout>(R.id.favorite_button)
+        val LinearLayoutMenu = findViewById<LinearLayout>(R.id.menu_button)
+        val LinearLayoutHistory = findViewById<TextView>(R.id.history)
 
-        // Устанавливаем обработчики нажатия
-        buttonOpenFact.setOnClickListener {
-            Log.d("MenuActivity", "Открываем FactActivity")
-            val intent = Intent(this, FactActivity::class.java)
-            startActivity(intent)
-        }
-
-        buttonOpenCategories.setOnClickListener {
-            Log.d("MenuActivity", "Открываем CategoryActivity")
+        LinearLayoutCategory.setOnClickListener {
+            // Код, который будет выполнен при нажатии
+            Log.d("CategoryActivity", "Открываем CategoryActivity")
             val intent = Intent(this, CategoryActivity::class.java)
             startActivity(intent)
         }
 
-        buttonOpenFavorites.setOnClickListener {
-            Log.d("MenuActivity", "Открываем FavoriteActivity")
+        LinearLayoutFact.setOnClickListener {
+            // Код, который будет выполнен при нажатии
+            Log.d("FactActivity", "Открываем FactActivity")
+            val intent = Intent(this, FactActivity::class.java)
+            startActivity(intent)
+        }
+
+        LinearLayoutFavorite.setOnClickListener {
+            // Код, который будет выполнен при нажатии
+            Log.d("FavoriteActivity", "Открываем FavoriteActivity")
             val intent = Intent(this, FavoriteActivity::class.java)
             startActivity(intent)
         }
 
-        buttonOpenMenu.setOnClickListener {
+        LinearLayoutMenu.setOnClickListener {
+            // Код, который будет выполнен при нажатии
             Log.d("MenuActivity", "Открываем MenuActivity")
             val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
 
-        buttonOpenHistory.setOnClickListener {
-            Log.d("MenuActivity", "Открываем HistoryActivity")
+        LinearLayoutHistory.setOnClickListener {
+            // Код, который будет выполнен при нажатии
+            Log.d("HistoryActivity", "Открываем HistoryActivity")
             val intent = Intent(this, HistoryActivity::class.java)
             startActivity(intent)
         }
+
     }
 }
