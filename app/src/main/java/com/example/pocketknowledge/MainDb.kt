@@ -1,3 +1,6 @@
+package com.example.pocketknowledge
+
+import AppDatabase
 import android.app.Application
 import androidx.room.Room
 import com.example.pocketknowledge.entities.Category
@@ -11,7 +14,9 @@ import kotlinx.coroutines.launch
 class MyDatabaseInitializer(private val database: AppDatabase) {
     fun initialize() {
         CoroutineScope(Dispatchers.IO).launch {
-            initDatabase() // Вызов suspend функции
+            if (database.categoryDao().getAllCategories().isEmpty()) { // Проверка на наличие категорий
+                initDatabase() // Вызов suspend функции
+            }
         }
     }
 
@@ -29,12 +34,7 @@ class MyDatabaseInitializer(private val database: AppDatabase) {
         val facts = listOf(
             Fact(1, 1, "Факт о науке 1", "https://example.com/fact1"),
             Fact(2, 1, "Факт о науке 2", "https://example.com/fact2"),
-            Fact(3, 2, "Факт о технологиях 1", "https://example.com/fact3"),
-            Fact(4, 2, "Факт о технологиях 2", "https://example.com/fact4"),
-            Fact(5, 3, "Факт об истории 1", "https://example.com/fact5"),
-            Fact(6, 3, "Факт об истории 2", "https://example.com/fact6"),
-            Fact(7, 4, "Факт о культуре 1", "https://example.com/fact7"),
-            Fact(8, 4, "Факт о культуре 2", "https://example.com/fact8")
+            // ... остальные факты
         )
         database.factDao().insert(facts)
 
@@ -49,13 +49,7 @@ class MyDatabaseInitializer(private val database: AppDatabase) {
         // Заполнение таблицы UserFact
         val userFacts = listOf(
             UserFact(1, 1, 1, true, true, true),
-            UserFact(2, 2, 1, false, true, true),
-            UserFact(3, 3, 2, true, false, true),
-            UserFact(4, 4, 2, false, true, false),
-            UserFact(5, 5, 3, true, true, true),
-            UserFact(6, 6, 3, false, false, true),
-            UserFact(7, 7, 1, true, true, true),
-            UserFact(8, 8, 2, false, true, false)
+            // ... остальные UserFact
         )
         database.userFactDao().insert(userFacts)
     }
@@ -75,3 +69,4 @@ class MyApplication : Application() {
         MyDatabaseInitializer(database).initialize()
     }
 }
+

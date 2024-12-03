@@ -8,7 +8,7 @@ import com.example.pocketknowledge.entities.Fact
 @Dao
 interface FactDao {
     @Insert
-    suspend fun insert(factList: List<Fact>)
+    suspend fun insert(fact: List<Fact>)
 
     @Update
     suspend fun update(fact: Fact)

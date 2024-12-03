@@ -1,15 +1,29 @@
 package com.example.pocketknowledge
 
+import AppDatabase
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+//import com.example.pocketknowledge.ViewModel.FactViewModel
+
 
 class FactActivity : AppCompatActivity() {
+//    private lateinit var factViewModel: FactViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fact)
+
+//        factViewModel = ViewModelProvider(this).get<FactViewModel>(FactViewModel::class.java)
+//
+//        val allFacts = factViewModel.getAllFacts { facts ->
+//            // Обработка полученного списка фактов
+//            println("Все факты: $facts")
+//        }
+
 
         val LinearLayoutCategory = findViewById<LinearLayout>(R.id.category_button)
         val LinearLayoutFact = findViewById<LinearLayout>(R.id.fact_button)
